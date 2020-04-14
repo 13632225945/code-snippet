@@ -1,6 +1,6 @@
 # 监听切换浏览器标签的事件
 ```javascript
-var browserHidden = 'hidden' in document ? 'hidden' : 'webkithidden' in document ? 'webkithidden' : 'mozhidden' in document ? 'mozhidden' : null;
+var browserHidden = document.hidden ? 'hidden' : document.webkithidden ? 'webkithidden' : document.mozhidden ? 'mozhidden' : null;
 var visibChange = 'visibilitychange' || 'webkitvisiblitychange' || 'mozvisibilitychange';
 document.addEventListener(visibChange, function() {
   if(browserHidden) {
